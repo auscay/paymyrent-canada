@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paymyrent</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container-padding {
+            padding-left: 1.5rem; /* Equivalent to px-6 */
+            padding-right: 1.5rem; /* Equivalent to px-6 */
+        }
+        @media (min-width: 1024px) {
+            .container-padding {
+                padding-left: 6rem; /* Equivalent to lg:px-24 */
+                padding-right: 6rem; /* Equivalent to lg:px-24 */
+            }
+        }
+    </style>
+    </head>
+    <body class="bg-white text-gray-800">
+
+        <!-- Header -->
+        <header class="bg-white py-4 shadow-sm fixed w-full top-0 z-50 px-[8%]">
+            <nav
+                class="container-padding flex justify-between items-center border border-[#F90303] p-5 rounded-full">
+                <!-- Left Logo + Nav Links -->
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2">
+                        <img src="images/logo.png" alt="Logo"
+                            class="h-6 md:h-8 mr-2" />
+                    </div>
+                    <!-- Desktop Menu -->
+                    <div
+                        class="hidden lg:flex space-x-6 text-sm font-medium text-gray-600">
+                        <a href="/rent_loan.html"
+                            class="hover:text-red-600 transition duration-300">Rentloans</a>
+                        <a href="/tenant.html"
+                            class="hover:text-red-600 transition duration-300">Tenant
+                            screening</a>
+                        <a href="/rent_loan.html"
+                            class="hover:text-red-600 transition duration-300">Upfrontrent
+                        </a>
+                        <a href="/rent_report.html"
+                            class="hover:text-red-600 transition duration-300">Rent
+                            reporting </a>
+                    </div>
+                </div>
+
+                <!-- Right Button + Hamburger -->
+                <div class="flex items-center space-x-4">
+                    <a href="#"
+                        class="text-sm font-medium text-white bg-[#3D3D3D] px-4 py-2 rounded-full hover:bg-red-700 transition duration-300">Apply</a>
+
+                    <!-- Hamburger (visible on mobile only) -->
+                    <button id="menu-btn"
+                        class="lg:hidden flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        <!-- Menu Icon -->
+                        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close Icon -->
+                        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 hidden" fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden lg:hidden bg-white shadow-md rounded-xl mt-2 mx-6 p-6 space-y-4 text-gray-700 font-medium">
+                <a href="/rent_loan.html"
+                    class="block hover:text-red-600 transition duration-300">Rentloans</a>
+                <a href="/tenant.html"
+                    class="block hover:text-red-600 transition duration-300">Tenant
+                    screening</a>
+                <a href="/rent_loan.html"
+                    class="block hover:text-red-600 transition duration-300">Upfrontrent</a>
+                <a href="/rent_report.html"
+                    class="block hover:text-red-600 transition duration-300">Rent
+                    reporting</a>
+            </div>
+        </header>
+
+        <main class>
+            <!-- Hero Section -->
+            <section
+                class="container-padding flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1
+                        class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                        Match <span class="text-red-600">Rent Payments.</span>
+                        to Your Salary Dates
+
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Pay half of your rent when your first paycheck arrives.
+                        Pay the balance when your second paycheck comes in.
+                    </p>
+                    <a href="#"
+                        class="inline-block bg-red-600 text-white font-medium py-3 px-6 rounded-full hover:bg-red-700 transition duration-300">
+                        GET STARTED
+                    </a>
+
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img
+                        src="images/split.jpeg"
+                        alt="Hero"
+                        class="rounded-3xl w-full max-w-lg h-auto">
+                </div>
+            </section>
+
+            <!-- Savings Features Section -->
+            <section class="container-padding">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-1 gap-12 lg:gap-24 items-center">
+                    <!-- Automated Savings -->
+                    <div
+                        class="order-1 lg:order-1 flex flex-col lg:flex-row items-center lg:space-x-8">
+                        <div class="lg:w-1/2 flex justify-center">
+                            <img
+                                src="images/No rent day Panic.png"
+                                alt="Automated Savings"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">
+                                No Rent-Day Panic</h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Your landlord gets the full rent on time, even
+                                if you only have half of it now.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Fixed Deposit -->
+                    <div
+                        class="order-3 lg:order-2 flex flex-col-reverse lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">Pay
+                                in Sync with Your Salary </h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Split rent into two parts: first paycheck and
+                                second paycheck. We pay your landlord in full on
+                                the day of your first pay check.
+                            </p>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                            <img
+                                src="images/Pay in Sync.png"
+                                alt="Fixed Deposit"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                    </div>
+
+                    <!-- 13th Month Savings -->
+                    <div
+                        class="order-2 lg:order-3 flex flex-col lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+                        <div class="lg:w-1/2 flex justify-center">
+                            <img
+                                src="images/Stay flexible.png"
+                                alt="13th Month Savings"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">Stay
+                                Flexible</h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Spread rent payments on your credit card and
+                                ease your cash flow. With Paymyrent, you can
+                                spread your payments across your credit card,
+                                giving you breathing room when cash is tight.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Search Properties -->
+                    <div
+                        class="order-4 lg:order-4 flex flex-col-reverse lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">Avoid
+                                Late Fees & Eviction Risk
+                            </h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Never worry about missing rent deadlines. Your
+                                landlord is paid on the due date while we wait
+                                for your next pay check.
+                            </p>
+                            <a href="#"
+                                class="inline-block bg-red-600 text-white font-medium py-3 px-6 rounded-full hover:bg-red-700 transition duration-300">GET
+                                IT NOW</a>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                            <img
+                                src="images/Avoid late fees.png"
+                                alt="Search Properties"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                    </div>
+
+                    <!-- Investment Section -->
+                    <div
+                        class="order-5 lg:order-5 flex flex-col lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+                        <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                            <img
+                                src="images/Screenshot (1194).png"
+                                alt="Investment"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">Flat
+                                fee </h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                No hidden charges, no surprises. Always
+                                transparent, always fair.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div
+                    class="order-3 lg:order-2 flex flex-col-reverse lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+
+                    <div class="lg:w-1/2">
+                        <h2
+                            class="text-3xl font-bold text-[#F90303] mb-4">Peace
+                            of Mind </h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Know your rent is already taken care of. No more
+                            sleepless nights or last-minute borrowing — just
+                            focus on your work, family, and daily life while we
+                            handle your landlord.
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-red-600 text-white font-medium py-3 px-6 rounded-full hover:bg-red-700 transition duration-300">GET
+                            IT NOW</a>
+                    </div>
+                    <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                        <img
+                            src="images/1758108927415_ChatGPT Image Aug 29, 2025, 01_00_56 AM.png"
+                            alt="Fixed Deposit"
+                            class="rounded-3xl w-full max-w-sm h-auto">
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="bg-[#7A0000] py-16 lg:py-24 text-center">
+                <h2
+                    class="text-3xl lg:text-4xl font-extrabold text-white mb-12 px-6">
+                    How to split your rent
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left max-w-6xl mx-auto px-6 sm:px-8 md:px-12">
+
+                    <!-- Step 1 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl font-bold text-white">1</span>
+                            <span class="h-16 w-[2px] bg-red-500 mt-2"></span>
+                        </div>
+                        <p class="text-white text-lg">
+                            Sign up to rent splitting on Paymyrent
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl font-bold text-white">2</span>
+                            <span class="h-16 w-[2px] bg-red-500 mt-2"></span>
+                        </div>
+                        <p class="text-white text-lg">
+                            Select the dates you pay rent and the dates you
+                            receive salary
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl font-bold text-white">3</span>
+                            <span class="h-16 w-[2px] bg-red-500 mt-2"></span>
+                        </div>
+                        <p class="text-white text-lg">
+                            Once approved, begin to split your monthly rent to
+                            align with your salary.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Safe & Secure Section -->
+            <section
+                class="container-padding py-12 bg-red-600 text-white rounded-3xl text-center shadow-xl mx-4 lg:mx-24 mb-12 mt-5">
+                <h2 class="text-3xl lg:text-4xl font-extrabold mb-4">Safe &
+                    Secure</h2>
+                <p class="text-lg mb-6">Relax, You’re Covered. Paymyrent Has
+                    Your Back</p>
+            </section>
+
+            <!-- The #1 savings platform Section -->
+            <section class="py-12 text-center px-4 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Heading -->
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+                        2025’s #1 Rent splitting platform
+                    </h2>
+
+                    <!-- Subtext -->
+                    <p
+                        class="text-lg sm:text-xl font-medium text-gray-600 mb-8">
+                        Rent splitting made easy—no stress, just support
+                    </p>
+
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-white text-black py-12 lg:py-20">
+                <div
+                    class="container-padding flex flex-col sm:flex-row justify-between gap-8">
+                    <!-- Brand Info -->
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <img src="images/logo.png" alt="Logo"
+                                class="h-6 md:h-8 mr-2" />
+                        </div>
+                        <p class="text-sm mb-4">
+                            Paymyrent Tech Inc. (“Paymyrent”) is a Canadian
+                            provider of responsible, unsecured lending
+                            solutions. We offer personal loans, rent support,
+                            credit cards, and digital financing
+                            tools—positioning ourselves as a trusted alternative
+                            to traditional bank lending for renters and
+                            landlords across Canada. (For Sub-32% APR Lenders
+                            Without License) ⚖️ Our Commitment to Responsible
+                            Lending At Paymyrent Tech Inc., we are committed to
+                            ethical lending, transparency, and regulatory
+                            compliance. Our loan products are designed to
+                            support renters with affordable, short-term
+                            financial solutions — while operating within the
+                            legal limits defined by the Business Practices and
+                            Consumer Protection Act (BPCPA) of British Columbia.
+                        </p>
+                    </div>
+
+                    <!-- Legal & Contact -->
+                    <div class="flex-1">
+                        <h4 class="text-black font-bold mb-4">📌 Regulatory
+                            Classification</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#">Our loans are offered with an Annual
+                                    Percentage Rate (APR) below 32%, which means
+                                    they are not considered high-cost credit
+                                    products under BC law.</a></li>
+                            <li><a href="#">As a result, Paymyrent is not
+                                    required to hold a High-Cost Credit Grantor
+                                    License under current provincial
+                                    regulations.</a></li>
+                        </ul>
+                        <h4 class="text-black font-bold mt-6 mb-4">Contact
+                            Us</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>support@paymyrentcanada.com</li>
+                            <li>15175, 62A Avenue, Surrey, BC, Canada.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </footer>
+
+        </main>
+        <script>
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    menuIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+  });
+</script>
+    </body>
+</html>

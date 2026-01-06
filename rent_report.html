@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rent Reporting for Tenants</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-50 font-sans">
+
+        <header class="bg-white relative">
+            <div
+                class="container mx-auto py-4 px-6 flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="/index.html">
+                        <img src="/images/logo.png" alt="PayMyRent Logo"
+                            class="h-8 mr-2">
+                    </a>
+
+                </div>
+                <div class="hidden md:flex items-center">
+                    <nav class="flex space-x-6 text-gray-700 mr-5">
+                        <a href="/rent_loan.html"
+                            class="hover:text-red-500">Rent
+                            Loans</a>
+                        <a href="/tenant.html" class="hover:text-red-500">Tenant
+                            Screening</a>
+                        <!-- <a href="#" class="hover:text-red-500">Upfront Rent</a> -->
+                        <a href="/rent_report.html"
+                            class="hover:text-red-500">Rent
+                            Reporting</a>
+                    </nav>
+                    <button
+                        class="bg-[#F30104] text-white py-2 px-6 rounded-md hover:bg-red-600">Apply</button>
+                </div>
+
+                <!-- Dark overlay -->
+                <div id="overlay"
+                    class="fixed inset-0 bg-black bg-opacity-40 hidden z-10"></div>
+
+                <!-- Apply Button (Desktop) -->
+
+                <!-- Mobile Hamburger -->
+                <button id="menuToggle"
+                    class="md:hidden text-gray-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+                <div class="p-6 flex flex-col space-y-4">
+                    <button id="closeMenu" class="self-end text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                            fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <a href="/rent_loan.html" class="hover:text-red-500">Rent
+                        Loans</a>
+                    <a href="tenant.html" class="hover:text-red-500">Tenant
+                        Screening</a>
+                    <!-- <a href="#" class="hover:text-red-500">Upfront Rent</a> -->
+                    <a href="rent_report.html"
+                        class="hover:text-red-500 font-bold">Rent
+                        Reporting</a>
+                    <button
+                        class="bg-[#F30104] text-white py-2 px-6 rounded-md hover:bg-red-600">Apply</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="container mx-auto mb-40 p-6 md:p-12">
+
+            <!-- Section 1 -->
+            <section class="container px-6 mx-auto mt-2">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Image first on mobile -->
+                    <div class="flex justify-center order-1 md:order-2">
+                        <img src="/images/rent_reporting.svg"
+                            alt="Rent Reporting Illustration"
+                            class="w-full max-w-xl">
+                    </div>
+                    <!-- Text second on mobile -->
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-4xl font-bold text-[#F33E01] mb-4">Rent
+                            Reporting</h2>
+                        <p class="text-gray-700 mb-6">Build your credit by
+                            reporting your rent. Start building or improving
+                            your credit score with your rent payments. The
+                            process is simple, automatic, and helps you take
+                            control of your financial future.</p>
+                        <button
+                            class="bg-[#F30104] text-white py-3 px-6 rounded-md font-bold hover:bg-red-600">Apply
+                            Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="py-16 bg-white mt-15">
+                <div class="container mx-auto px-6">
+                    <h3
+                        class="text-3xl font-bold text-[#F30104] mb-4 text-center md:text-left">Benefits
+                        of Rent Reporting for Tenants</h3>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <!-- Text first on mobile -->
+                        <div
+                            class="order-2 md:order-1 grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+                            <div
+                                class="flex flex-col items-center text-center md:items-start md:text-left">
+                                <img src="/images/Frame 72.png" alt="number 1"
+                                    class="w-8 h-8 mb-2">
+                                <h4 class="font-bold text-gray-800">Boost Your
+                                    Credit Score</h4>
+                                <p class="text-gray-600 text-sm mt-1">On-time
+                                    rent payments can improve your credit
+                                    score.</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center md:items-start md:text-left">
+                                <img src="/images/Frame 72 (1).png"
+                                    alt="number 2" class="w-8 h-8 mb-2">
+                                <h4 class="font-bold text-gray-800">Build Credit
+                                    Without Taking on Debt</h4>
+                                <p class="text-gray-600 text-sm mt-1">On-time
+                                    rent payments can improve your credit
+                                    score.</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center md:items-start md:text-left">
+                                <img src="/images/Frame 72 (2).png"
+                                    alt="number 3" class="w-8 h-8 mb-2">
+                                <h4 class="font-bold text-gray-800">Boost Your
+                                    Credit Score</h4>
+                                <p class="text-gray-600 text-sm mt-1">On-time
+                                    rent payments can improve your credit
+                                    score.</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center md:items-start md:text-left">
+                                <img src="/images/Frame 72 (3).png"
+                                    alt="number 4" class="w-8 h-8 mb-2">
+                                <h4 class="font-bold text-gray-800">Boost Your
+                                    Credit Score</h4>
+                                <p class="text-gray-600 text-sm mt-1">On-time
+                                    rent payments can improve your credit
+                                    score.</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center md:items-start md:text-left">
+                                <img src="/images/Frame 72 (4).png"
+                                    alt="number 5" class="w-8 h-8 mb-2">
+                                <h4 class="font-bold text-gray-800">Boost Your
+                                    Credit Score</h4>
+                                <p class="text-gray-600 text-sm mt-1">On-time
+                                    rent payments can improve your credit
+                                    score.</p>
+                            </div>
+                            <div
+                                class="flex flex-col items-center text-center md:items-start md:text-left">
+                                <img src="/images/Frame 72 (5).png"
+                                    alt="number 6" class="w-8 h-8 mb-2">
+                                <h4 class="font-bold text-gray-800">Boost Your
+                                    Credit Score</h4>
+                                <p class="text-gray-600 text-sm mt-1">On-time
+                                    rent payments can improve your credit
+                                    score.</p>
+                            </div>
+                        </div>
+                        <!-- Image first on mobile -->
+                        <div class="flex justify-center order-1 md:order-2">
+                            <img src="/images/payment bundle.svg"
+                                alt="Benefits Illustration"
+                                class="w-full max-w-xl">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="container mx-auto py-16 px-6 md:p-12 mb-38 mt-1">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Image first on mobile -->
+                    <div class="flex justify-center order-1 md:order-1">
+                        <img src="/images/Payment report.svg"
+                            alt="Past Payments Illustration"
+                            class="w-full max-w-lg">
+                    </div>
+                    <!-- Text second on mobile -->
+                    <div class="order-2 md:order-2">
+                        <h3
+                            class="text-3xl font-bold text-[#F30104] mb-2">Report
+                            Past Payments <br>(Up to 24 Months!)</h3>
+                        <p class="text-gray-700 mt-4 mb-6">Want to give your
+                            credit a quick boost? We can report your past rent
+                            payments, giving your credit file a solid boost
+                            almost instantly for just <span
+                                class="font-bold">$59 one-time fee.</span></p>
+                        <button
+                            class="bg-[#F30104] text-white py-3 px-6 rounded-md font-bold hover:bg-red-600">Apply
+                            Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section
+                class="py-4 bg-[#F30104] text-white rounded-t-lg text-center h-20">
+                <h2 class="text-2xl font-bold mb-2">Frequently Ask
+                    Questions</h2>
+                <p class="mb-2">What can we help you with?</p>
+            </section>
+            <br><br>
+
+            <div
+                class="container mx-auto max-w-3xl bg-white text-gray-700 rounded-lg shadow-md">
+                <div class="border-b border-gray-200">
+                    <button
+                        class="w-full py-4 px-6 text-left focus:outline-none flex justify-between items-center">
+                        <span>How much can I get?</span>
+                        <img src="/images/Chevrons down.png" alt="down arrow"
+                            class="w-5 h-5">
+                    </button>
+                </div>
+                <div class="border-b border-gray-200">
+                    <button
+                        class="w-full py-4 px-6 text-left focus:outline-none flex justify-between items-center">
+                        <span>How long is Repayment?</span>
+                        <img src="/images/Chevrons down.png" alt="down arrow"
+                            class="w-5 h-5">
+                    </button>
+                </div>
+                <div class="border-b border-gray-200">
+                    <button
+                        class="w-full py-4 px-6 text-left focus:outline-none flex justify-between items-center">
+                        <span>How long does it take?</span>
+                        <img src="/images/Chevrons down.png" alt="down arrow"
+                            class="w-5 h-5">
+                    </button>
+                </div>
+                <div>
+                    <button
+                        class="w-full py-4 px-6 text-left focus:outline-none flex justify-between items-center">
+                        <span>Can I pay off the loan anytime?</span>
+                        <img src="/images/Chevrons down.png" alt="down arrow"
+                            class="w-5 h-5">
+                    </button>
+                </div>
+            </div>
+        </main>
+        <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const closeMenu = document.getElementById('closeMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('overlay');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+    overlay.classList.toggle('hidden');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+    mobileMenu.classList.remove('translate-x-0');
+    overlay.classList.add('hidden');
+  });
+  </script>
+    </body>
+</html>

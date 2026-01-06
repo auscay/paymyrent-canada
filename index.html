@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PayMyRent</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="h-screen">
+        <!-- Navbar (transparent, floating) -->
+        <header
+            class="absolute top-0 left-0 w-full flex justify-between items-center px-4 py-3 z-50 bg-transparent">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <!-- Shrink logo on mobile -->
+                <img src="images/logo.png" alt="Logo" class="h-6 md:h-8 mr-2" />
+            </div>
+        </header>
+
+        <!-- Fullscreen Hero Section -->
+        <main class="grid grid-cols-1 md:grid-cols-3 h-screen">
+            <!-- Landlords -->
+            <div class="relative group overflow-hidden">
+                <img
+                    src="images/landloard.png"
+                    alt="Landlord"
+                    class="w-full h-full object-cover" />
+
+                <!-- Overlay -->
+                <div
+                    class="absolute inset-0 bg-red-600/90 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col items-start justify-center p-4 md:p-8 z-20">
+                    <div class="text-left">
+                        <h2
+                            class="text-white text-xl md:text-3xl font-bold mb-2 md:mb-4">
+                            LANDLORDS
+                        </h2>
+                        <ul
+                            class="list-disc list-inside text-white space-y-3 md:space-y-10 text-sm md:text-lg lg:text-2xl">
+                            <li>
+                                <a href="/landlord.html"
+                                    class="hover:underline font-bold">Advance
+                                    rent for Landlords</a>
+                            </li>
+
+                            <li>
+                                <a href="/tenant.html"
+                                    class="hover:underline font-bold">Tenant
+                                    Screening</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://form.paymyrentcanada.com/rent-report"
+                                    class="hover:underline font-bold"> Tenant
+                                    Rent Reporting</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Default text (when not hovered) -->
+                <div
+                    class="absolute inset-0 flex items-end justify-center p-6 group-hover:opacity-0 transition pointer-events-none z-10">
+                    <h2 class="text-white text-2xl font-bold">LANDLORDS</h2>
+                </div>
+            </div>
+
+            <!-- Tenants -->
+            <div class="relative group overflow-hidden">
+                <img
+                    src="images/hero2.jpg"
+                    alt="Tenant"
+                    class="w-full h-full object-cover" />
+
+                <!-- Overlay -->
+                <div
+                    class="absolute inset-0 bg-red-600/90 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col items-start justify-center p-4 md:p-8 z-20">
+                    <div class="text-left">
+                        <h2
+                            class="text-white text-xl md:text-3xl font-bold mb-2 md:mb-4">
+                            TENANTS
+                        </h2>
+                        <ul
+                            class="list-disc list-inside text-white space-y-3 md:space-y-10 text-sm md:text-lg lg:text-2xl">
+                            <li>
+                                <a href="/tenant.html"
+                                    class="hover:underline font-bold">Security
+                                    Deposit financing</a>
+                            </li>
+                            <li>
+                                <a href="/rent_loan.html"
+                                    class="hover:underline font-bold">Loan for
+                                    house rent</a>
+                            </li>
+                            <li>
+                                <a href="/tenant_report.html"
+                                    class="hover:underline font-bold">Rent
+                                    Reporting</a>
+                            </li>
+                            <li>
+                                <a href="split_rent.html"
+                                    class="hover:underline font-bold"> Pay your
+                                    rent in installment</a>
+                            </li>
+
+                            <li>
+                                <a href="payrent-withcard.html"
+                                    class="hover:underline font-bold"> Pay your
+                                    rent with Credit Card</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Default text -->
+                <div
+                    class="absolute inset-0 flex items-end justify-center p-6 group-hover:opacity-0 transition pointer-events-none z-10">
+                    <h2 class="text-white text-2xl font-bold">TENANTS</h2>
+                </div>
+            </div>
+
+            <!-- Savings -->
+            <div class="relative group overflow-hidden">
+                <img
+                    src="images/hero3.jpg"
+                    alt="Investment"
+                    class="w-full h-full object-cover" />
+
+                <!-- Overlay -->
+                <div
+                    class="absolute inset-0 bg-red-600/90 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col items-start justify-center p-4 md:p-8 z-20">
+                    <div class="text-left">
+                        <h2
+                            class="text-white text-xl md:text-3xl font-bold mb-2 md:mb-4">
+                            SAVINGS
+                        </h2>
+                        <ul
+                            class="list-disc list-inside text-white space-y-3 md:space-y-10 text-sm md:text-lg lg:text-2xl">
+                            <li>
+                                <a href="/mortgage_down_payments.html"
+                                    class="hover:underline font-bold">Save
+                                    towards your Mortgage down Payment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Default text -->
+                <div
+                    class="absolute inset-0 flex items-end justify-center p-6 group-hover:opacity-0 transition pointer-events-none z-10">
+                    <h2 class="text-white text-2xl font-bold">SAVINGS</h2>
+                </div>
+            </div>
+        </main>
+
+        <script>
+      // Toggle mobile menu
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      if (menuBtn) {
+        menuBtn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+          menu.classList.toggle("flex");
+          menu.classList.toggle("flex-col");
+          menu.classList.toggle("space-y-3");
+          menu.classList.toggle("absolute");
+          menu.classList.toggle("top-16");
+          menu.classList.toggle("right-6");
+          menu.classList.toggle("bg-white");
+          menu.classList.toggle("p-4");
+          menu.classList.toggle("rounded-lg");
+          menu.classList.toggle("shadow-lg");
+        });
+      }
+    </script>
+    </body>
+</html>

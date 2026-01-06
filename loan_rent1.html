@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Federal Staff Quick Loan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-white">
+    <!-- full-height grid: left image (2) / right form card (3) -->
+    <div class="min-h-screen grid grid-cols-1 lg:grid-cols-5">
+
+      <!-- LEFT: image with text below -->
+      <div class="lg:col-span-2 flex flex-col h-full bg-sky-400">
+        <!-- Image fills available space -->
+        <div class="flex-1 flex items-center justify-center">
+          <img src="/images/1a.png" alt="Lady"
+            class="object-contain h-full w-auto mx-auto" />
+        </div>
+
+        <!-- Title below image -->
+        <div class="mb-16 text-center bg-sky-400">
+          <h2 class="text-white font-bold text-xl lg:text-3xl tracking-wide">
+            FEDERAL STAFF QUICK LOAN
+          </h2>
+        </div>
+      </div>
+
+      <!-- RIGHT: taller form card -->
+      <div class="lg:col-span-3 flex items-center justify-center p-4 lg:p-10">
+        <!-- Card -->
+        <div
+          class="w-full h-[90vh] max-w-5xl bg-white rounded-2xl p-6 md:p-12 ">
+
+          <!-- top step icons -->
+          <div class="flex justify-between items-center mb-10">
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center">
+                <span class="text-sky-600 text-lg">🏠</span>
+              </div>
+              <p class="text-lg mt-2">Amount</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center">
+                <span class="text-sky-600 text-lg">🔗</span>
+              </div>
+              <p class="text-lg mt-2">Loan Breakdown</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center">
+                <span class="text-sky-600 text-lg">👤</span>
+              </div>
+              <p class="text-lg mt-2">Personal Information</p>
+            </div>
+          </div>
+
+          <!-- form content -->
+          <form
+            class="space-y-8 h-[calc(100%-5rem)] flex flex-col justify-between">
+            <div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label
+                    class="block text-lg font-medium text-gray-900">Amount</label>
+                  <input type="number" placeholder="Enter amount" required
+                    class="mt-2 w-full rounded-md border border-gray-300 shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:border-sky-400" />
+                </div>
+                <div>
+                  <label
+                    class="block text-lg font-medium text-gray-900">Tenor</label>
+                  <select required
+                    class="mt-2 w-full rounded-md border border-gray-300 shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:border-sky-400">
+                    <option value>Select tenor</option>
+                    <option value="30">30 days</option>
+                    <option value="60">60 days</option>
+                    <option value="90">90 days</option>
+                  </select>
+                </div>
+              </div>
+
+              <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+                By submitting your loan application, you acknowledge and agree
+                to the following terms:
+                Confidence Microfinance Bank Limited may verify information
+                about your employment, salary, loans,
+                and other relevant data from third-party sources to assess
+                eligibility. If approved, loan installments
+                will be automatically deducted from your salary source before
+                being credited to your account. In case
+                of default, any outstanding balance may be recovered from other
+                linked accounts. You confirm acceptance
+                of our <a href="#" class="text-sky-800 underline">Privacy
+                  Policy</a> and
+                <a href="#" class="text-sky-800 underline">Loan Terms and
+                  Conditions</a>.
+              </p>
+
+              <div class="mt-4 flex items-start">
+                <input id="consent" type="checkbox"
+                  class="mt-1 h-4 w-4 mt-10 text-sky-600 focus:ring-sky-500 border-gray-300 rounded" />
+                <label for="consent" class="ml-3 mt-8 text-lg text-black">
+                  I consent to the Confidence bank Application process and terms
+                  outlined above.
+                </label>
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <button type="submit"
+                class="px-2 py-3 mb-4 bg-red-700 text-xl font-medium rounded-md hover:bg-red-700">
+                Start Application
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

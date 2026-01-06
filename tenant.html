@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tenant Screening</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-50 font-sans">
+
+        <!-- HEADER -->
+        <header class="flex items-center justify-between p-6 bg-white relative">
+            <div class="flex items-center">
+                <a href="/index.html">
+                    <img src="/images/logo.png" alt="PayMyRent Logo"
+                        class="h-8 mr-2">
+                </a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center">
+                <nav class="flex space-x-6 text-gray-700 mr-5">
+                    <a href="/rent_loan.html" class="hover:text-red-500">Rent
+                        Loans</a>
+                    <a href="/tenant.html" class="hover:text-red-500">Tenant
+                        Screening</a>
+                    <!-- <a href="#" class="hover:text-red-500">Upfront Rent</a> -->
+                    <a href="/rent_report.html" class="hover:text-red-500">Rent
+                        Reporting</a>
+                </nav>
+                <a href="https://form.paymyrentcanada.com/tenant">
+
+                    <button
+                        class="bg-[#F30104] text-white py-2 px-6 rounded-md hover:bg-red-600">Apply</button>
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menuToggle"
+                class="md:hidden text-gray-700 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+                <div class="p-6 flex flex-col space-y-4">
+                    <button id="closeMenu" class="self-end text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                            fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <a href="/rent_loan.html" class="hover:text-red-500">Rent
+                        Loans</a>
+                    <a href="/tenant.html" class="hover:text-red-500">Tenant
+                        Screening</a>
+                    <!-- <a href="#" class="hover:text-red-500">Upfront Rent</a> -->
+                    <a href="/rent_report.html" class="hover:text-red-500">Rent
+                        Reporting</a>
+                    <a href="https://form.paymyrentcanada.com/tenant">
+
+                        <button
+                            class="bg-[#F30104] text-white py-2 px-6 rounded-md hover:bg-red-600">Apply</button>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dark overlay -->
+        <div id="overlay"
+            class="fixed inset-0 bg-black bg-opacity-40 hidden z-10"></div>
+
+        <!-- SECTION 1 -->
+        <section class="container mx-auto mb-5 p-6 md:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- IMAGE first on mobile -->
+                <div class="flex justify-center order-1 md:order-2">
+                    <img src="/images/tenant screening.svg"
+                        alt="Tenant Screening Illustration"
+                        class="w-full max-w-xl">
+                </div>
+                <!-- TEXT second on mobile -->
+                <div class="order-2 md:order-1">
+                    <h2 class="text-4xl font-bold text-[#F33E01] mb-4">Tenant
+                        Screening</h2>
+                    <p class="text-gray-700 mb-6">Before handing over your keys,
+                        let us help you ensure your next tenant is a perfect
+                        fit. Our tenant screening service includes:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <img src="/images/Frame 36 (1).png" alt="Icon"
+                                class="h-8 w-8">
+                            <h4 class="font-bold text-gray-800">Employment
+                                Verification</h4>
+                            <p class="text-gray-600 text-sm">Know they can truly
+                                afford the rent.</p>
+                        </div>
+                        <div>
+                            <img src="/images/Frame 36 (2).png" alt="Icon"
+                                class="h-8 w-8">
+                            <h4 class="font-bold text-gray-800">Credit History
+                                Check</h4>
+                            <p class="text-gray-600 text-sm">Review their
+                                financial responsibility.</p>
+                        </div>
+                        <div>
+                            <img src="/images/Frame 36 (3).png" alt="Icon"
+                                class="h-8 w-8">
+                            <h4 class="font-bold text-gray-800">Past Landlord
+                                Verification</h4>
+                            <p class="text-gray-600 text-sm">We reach past
+                                landlords to verify behavior, rent payment, and
+                                more.</p>
+                        </div>
+                        <div>
+                            <img src="/images/Frame 36.png" alt="Icon"
+                                class="h-8 w-8">
+                            <h4 class="font-bold text-gray-800">In-person Rental
+                                History Check</h4>
+                            <p class="text-gray-600 text-sm">We can inspect a
+                                tenant's previous residence to see how they
+                                treated it.</p>
+                        </div>
+                    </div>
+                    <a href="https://form.paymyrentcanada.com/tenant">
+                        <button
+                            class="bg-[#F30104] text-white py-3 px-6 rounded-md font-bold mt-6 hover:bg-red-600">Screen
+                            A Tenant</button>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section class="py-4 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold text-[#F33E01] mb-5">Why you
+                    should use our Tenant </h3>
+                <p class="text-3xl font-bold text-[#F33E01] mb-12">Screening
+                    Service</p>
+                <p class="text-[#000000] font-semibold mb-2">Protect your
+                    investment, Choose the right tenants.</p>
+                <p class="text-gray-600 max-w-3xl mx-auto mb-12">At PayMyRent,
+                    we go beyond basic checks to give you a full picture of your
+                    prospective tenants. Here's why landlords love our one-stop
+                    service:</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div class="flex flex-col items-center">
+                    <img src="/images/reduce risk-01.svg" alt="Risk Icon"
+                        class="h-20 w-20 mb-4">
+                    <h4 class="font-bold text-gray-800 ">Reduce Risk
+                        Default</h4>
+                    <p class="text-gray-600 text-sm mt-2 px-4">Catch red flags
+                        early
+                        – like unstable income or a history of evictions –
+                        before they become your problem.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/images/save time and stress-01.svg"
+                        alt="Time Icon" class="h-20 w-20 mb-4">
+                    <h4 class="font-bold text-gray-800">Save Time & Stress</h4>
+                    <p class="text-gray-600 text-sm mt-2 px-4">We handle
+                        employment
+                        checks, credit history, background checks and contact
+                        previous homes and landlords—so you don't have to.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/images/protect your property.svg"
+                        alt="Property Icon" class="h-20 w-20 mb-4">
+                    <h4 class="font-bold text-gray-800">Protect your
+                        Property</h4>
+                    <p class="text-gray-600 text-sm mt-2 px-4">By inspecting a
+                        tenant's previous residence, you can see how responsibly
+                        they treat rented spaces.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/images/verify affordability-01.svg"
+                        alt="Affordability Icon" class="h-20 w-20 mb-4">
+                    <h4 class="font-bold text-gray-800">Verify Real
+                        Affordability</h4>
+                    <p class="text-gray-600 text-sm mt-2 px-4">We confirm stable
+                        employment and income to ensure your new tenant can
+                        consistently pay rent.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="/images/imprroved tenant quality-01.svg"
+                        alt="Quality Icon" class="h-20 w-20 mb-4">
+                    <h4 class="font-bold text-gray-800">Improve Tenant
+                        Quality</h4>
+                    <p class="text-gray-600 text-sm mt-2 px-4">With thorough
+                        screening, you attract high-quality tenants who will pay
+                        on-time and treat your property with care.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section class="container mx-auto py-16 px-6 md:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- IMAGE first on mobile -->
+                <div class="flex justify-center order-1 md:order-2">
+                    <img src="/images/payment bundle.svg"
+                        alt="Screening Bundle Illustration"
+                        class="w-full max-w-xl">
+                </div>
+                <!-- TEXT second on mobile -->
+                <div class="order-2 md:order-1">
+                    <h3 class="text-3xl font-bold text-[#F33E01] mb-2">Tenant
+                        Screening Bundle</h3>
+                    <p class="text-gray-700 font-semibold mb-6">Comprehensive
+                        Tenant Screening</p>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <img src="/images/Frame 37.png" alt class="h-6 w-6">
+                            <span>Employment Verification</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="/images/Frame 37.png" alt class="h-6 w-6">
+                            <span>Credit History Report</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="/images/Frame 37.png" alt class="h-6 w-6">
+                            <span>Past Landlord Reference (Physical)</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="/images/Frame 37.png" alt class="h-6 w-6">
+                            <span>In-person inspection of previous
+                                residence</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="/images/Frame 37.png" alt class="h-6 w-6">
+                            <span>ID Verification</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <span
+                            class="font-semibold text-[#FFFFFF] text-sm bg-[#F30104] py-1 px-24 rounded-lg">$15
+                            per applicant</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JS for Toggle -->
+        <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('-translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+       overlay.classList.toggle('hidden');
+    });
+    overlay.addEventListener('click', () => {
+  mobileMenu.classList.add('-translate-x-full');
+  overlay.classList.add('hidden');
+});
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
+      mobileMenu.classList.remove('translate-x-0');
+      overlay.classList.add('hidden');
+    });
+  </script>
+
+    </body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paymyrent</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container-padding {
+            padding-left: 1.5rem; /* Equivalent to px-6 */
+            padding-right: 1.5rem; /* Equivalent to px-6 */
+        }
+        @media (min-width: 1024px) {
+            .container-padding {
+                padding-left: 6rem; /* Equivalent to lg:px-24 */
+                padding-right: 6rem; /* Equivalent to lg:px-24 */
+            }
+        }
+    </style>
+    </head>
+    <body class="bg-white text-gray-800">
+
+        <!-- Header -->
+        <header class="bg-white py-4 shadow-sm fixed w-full top-0 z-50 px-[8%]">
+            <nav
+                class="container-padding flex justify-between items-center border border-[#F90303] p-5 rounded-full">
+                <!-- Left Logo + Nav Links -->
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2">
+                        <img src="images/logo.png" alt="Logo"
+                            class="h-6 md:h-8 mr-2" />
+                    </div>
+                    <!-- Desktop Menu -->
+                    <div
+                        class="hidden lg:flex space-x-6 text-sm font-medium text-gray-600">
+                        <a href="/rent_loan.html"
+                            class="hover:text-red-600 transition duration-300">Rentloans</a>
+                        <a href="/tenant.html"
+                            class="hover:text-red-600 transition duration-300">Tenant
+                            screening</a>
+                        <a href="/rent_loan.html"
+                            class="hover:text-red-600 transition duration-300">Upfrontrent
+                        </a>
+                        <a href="/rent_report.html"
+                            class="hover:text-red-600 transition duration-300">Rent
+                            reporting </a>
+                    </div>
+                </div>
+
+                <!-- Right Button + Hamburger -->
+                <div class="flex items-center space-x-4">
+                  
+                    <a href="https://form.paymyrentcanada.com/landlord"
+                        class="text-sm font-medium text-white bg-[#3D3D3D] px-4 py-2 rounded-xl hover:bg-red-700 transition duration-300">Apply</a>
+
+                    <!-- Hamburger (visible on mobile only) -->
+                    <button id="menu-btn"
+                        class="lg:hidden flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100">
+                        <!-- Menu Icon -->
+                        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close Icon -->
+                        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 hidden" fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden lg:hidden bg-white shadow-md rounded-xl mt-2 mx-6 p-6 space-y-4 text-gray-700 font-medium">
+                <a href="/rent_loan.html"
+                    class="block hover:text-red-600 transition duration-300">Rentloans</a>
+                <a href="/tenant.html"
+                    class="block hover:text-red-600 transition duration-300">Tenant
+                    screening</a>
+                <a href="/rent_loan.html"
+                    class="block hover:text-red-600 transition duration-300">Upfrontrent</a>
+                <a href="/rent_report.html"
+                    class="block hover:text-red-600 transition duration-300">Rent
+                    reporting</a>
+            </div>
+        </header>
+
+        <main class="pt-20">
+            <!-- Hero Section -->
+            <section
+                class="container-padding flex flex-col lg:flex-row items-center justify-between py-12 lg:py-24">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1
+                        class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                      Get <span class="text-red-600">Your Tenants Rent</span>
+                    </h1>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                      in Advance
+                    </h1>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                      Without the  <span class="text-red-600"> Wait </span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Landlords, improve cash flow and reduce risk with Paymyrent’s Advance Rent Service. We provide you with up to 12 months of rent upfront while your tenant pays monthly.
+                    </p>
+                   <a href="https://form.paymyrentcanada.com/landlord"
+                        class="inline-block bg-red-600 text-white font-medium py-3 px-6 rounded-full hover:bg-red-700 transition duration-300">
+                        Apply Now
+                    </a>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img
+                        src="images/landlord.png"
+                        alt="Hero"
+                        class="rounded-3xl w-full max-w-lg h-auto">
+                </div>
+            </section>
+          </div>
+
+            <!-- Savings Features Section -->
+            <section class="container-padding py-12 lg:py-24">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-1 gap-12 lg:gap-24 items-center">
+                    <!-- Automated Savings -->
+                    <div
+                        class="order-1 lg:order-1 flex flex-col lg:flex-row items-center lg:space-x-8">
+                        <div class="lg:w-1/2 flex justify-center">
+                            <img
+                                src="images/landlord1.png"
+                                alt="Automated Savings"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-2">Access Up to 12 Months’ Rent in Advance</h2>
+
+                           <span class="block ">Get up to a year’s rent from your tenants upfront-</span>
+                           <span class="block ">no waiting required. Receive your funds today</span>
+                           <span class="block "> and take care of your financial needs with ease.</span>
+                           
+                        </div>
+                    </div>
+
+
+                    <!-- Fixed Deposit -->
+                    <div
+                        class="order-3 lg:order-2 flex flex-col-reverse lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+
+                        <div class="lg:w-1/2 leading-tight">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-2">No Credit Check Required</h2>
+                            <p class="text-lg text-gray-600 mb-1 block">
+                                If your tenant is already paying rent, that’s all that matters.
+                            </p>
+                            <p class="text-lg text-gray-600 mb-2 block">
+                                We make it simple and hassle-free.
+
+                            </p>
+                            
+                        </div>
+                        
+                        <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                            <img
+                                src="images/landlord2.png"
+                                alt="Fixed Deposit"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                    </div>
+
+                    <!-- 13th Month Savings -->
+                    <div
+                        class="order-2 lg:order-3 flex flex-col lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+                        <div class="lg:w-1/2 flex justify-center">
+                            <img
+                                src="images/landlord3.png"
+                                alt="13th Month Savings"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">Access Up to $200,000 in Upfront Rent</h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Get advance rent payments from all your tenants—up to $200,000. Fast, secure, and hassle-free. We’ve got you covered.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Search Properties -->
+                    <div
+                        class="order-4 lg:order-4 flex flex-col-reverse lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">Scalable</h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Whether you own 1 unit or 100, you can access the rent upfront from multiple tenants
+                            </p>
+                            
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                            <img
+                                src="images/landlord4.png"
+                                alt="Search Properties"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                    </div>
+
+                    <!-- Investment Section -->
+                    <div
+                        class="order-5 lg:order-5 flex flex-col lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+                        <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                            <img
+                                src="images/landlord5.png"
+                                alt="Search Properties"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                        </div>
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">Grow Your Rental Portfolio
+                                 </h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Unlock upfront rent from your existing tenants and reinvest it into acquiring more properties. With instant access to cash flow, you can expand your portfolio faster—without waiting months for rent to trickle in.
+
+                            </p>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <!-- Investment Section -->
+                    <div
+                        class="order-5 lg:order-5 flex flex-col lg:flex-row items-center lg:space-x-8 mt-12 lg:mt-0">
+                        <div class="lg:w-1/2">
+                            <h2
+                                class="text-3xl font-bold text-[#F90303] mb-4">Flexible Use of Funds 
+
+                                 </h2>
+                            <p class="text-lg text-gray-600 mb-6">
+                                Use the upfront rent for property upgrades, mortgage payments
+                            </p>
+                            <a href="https://form.paymyrentcanada.com/landlord"
+                        class="inline-block bg-red-600 text-white font-medium py-3 px-6 rounded-full hover:bg-red-700 transition duration-300">
+                        Apply Now
+                    </a>
+                        </div>
+
+                        <div class="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                            <img
+                                src="images/invest.png"
+                                alt="Investment"
+                                class="rounded-3xl w-full max-w-sm h-auto">
+                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="bg-[#7A0000] py-16 lg:py-24 text-center">
+                <h2
+                    class="text-3xl lg:text-4xl font-extrabold text-white mb-12 px-6">
+                    How Our Advance Rent Platform Works
+                </h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left max-w-6xl mx-auto px-6 sm:px-8 md:px-12">
+
+                    <!-- Step 1 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl font-bold text-white">1</span>
+                            <span class="h-16 w-[2px] bg-red-500 mt-2"></span>
+                        </div>
+                        <p class="text-white text-lg">
+                           Apply for Rent Advance – Sign up and complete a quick application. It’s fast, secure, and only takes a few minutes.
+
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl font-bold text-white">2</span>
+                            <span class="h-16 w-[2px] bg-red-500 mt-2"></span>
+                        </div>
+                        <p class="text-white text-lg">
+                            Submit Your Details – Provide basic information such as your lease and proof of tenant payments so we can verify your rental history.
+
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl font-bold text-white">3</span>
+                            <span class="h-16 w-[2px] bg-red-500 mt-2"></span>
+                        </div>
+                        <p class="text-white text-lg">
+                            Receive Your Funds – Once approved, you’ll get your tenants’ rent paid upfront—hassle-free.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Safe & Secure Section -->
+            <section
+                class="container-padding py-12 bg-red-600 text-white rounded-3xl text-center shadow-xl mx-4 lg:mx-24 mb-12 mt-5">
+                <h2 class="text-3xl lg:text-4xl font-extrabold mb-4">Safe &
+                    Secure</h2>
+                <p class="text-lg mb-6">Relax, You’re Covered. Paymyrent Has
+                    Your Back</p>
+            </section>
+
+            <!-- The #1 savings platform Section -->
+            <section class="py-12 text-center px-4 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Heading -->
+                    <h2
+                        class="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-gray-900 mb-4">
+                       The #1 platform for Landlord Advance 2025
+                    </h2>
+
+                    <!-- Subtext -->
+                    <p
+                        class="text-lg sm:text-xl font-medium text-gray-600 mb-8">
+                        Save money without thinking about it
+                    </p>
+
+                    <!-- Button -->
+                    <a href="#"
+                        class="inline-block bg-red-600 text-white font-medium py-3 px-8 rounded-full 
+      hover:bg-red-700 transition duration-300 shadow-md">
+                       Get Tenants Rent Today
+                    </a>
+                </div>
+            </section>
+
+            <section class="bg-black py-16 sm:py-20 text-center px-4">
+                <h2
+                    class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-6 sm:mb-8">
+                    Advance rent made easy- no stress, just support. 
+                </h2>
+                <button
+                    class="bg-white text-black text-base sm:text-lg font-semibold px-6 sm:px-8 py-3 rounded-full shadow hover:bg-gray-200 transition">
+                   Get Tenant Rent Today
+                </button>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-white text-black py-12 lg:py-20">
+                <div
+                    class="container-padding flex flex-col sm:flex-row justify-between gap-8">
+                    <!-- Brand Info -->
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <img src="images/logo.png" alt="Logo"
+                                class="h-6 md:h-8 mr-2" />
+                        </div>
+                        <p class="text-sm mb-4">
+                            Paymyrent Tech Inc. (“Paymyrent”) is a Canadian
+                            provider of responsible, unsecured lending
+                            solutions. We offer personal loans, rent support,
+                            credit cards, and digital financing
+                            tools—positioning ourselves as a trusted alternative
+                            to traditional bank lending for renters and
+                            landlords across Canada. (For Sub-32% APR Lenders
+                            Without License) ⚖️ Our Commitment to Responsible
+                            Lending At Paymyrent Tech Inc., we are committed to
+                            ethical lending, transparency, and regulatory
+                            compliance. Our loan products are designed to
+                            support renters with affordable, short-term
+                            financial solutions — while operating within the
+                            legal limits defined by the Business Practices and
+                            Consumer Protection Act (BPCPA) of British Columbia.
+                        </p>
+                    </div>
+
+                    <!-- Legal & Contact -->
+                    <div class="flex-1">
+                        <h4 class="text-black font-bold mb-4">📌 Regulatory
+                            Classification</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#">Our loans are offered with an Annual
+                                    Percentage Rate (APR) below 32%, which means
+                                    they are not considered high-cost credit
+                                    products under BC law.</a></li>
+                            <li><a href="#">As a result, Paymyrent is not
+                                    required to hold a High-Cost Credit Grantor
+                                    License under current provincial
+                                    regulations.</a></li>
+                        </ul>
+                        <h4 class="text-black font-bold mt-6 mb-4">Contact
+                            Us</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>support@paymyrentcanada.com</li>
+                            <li>15175, 62A Avenue, Surrey, BC, Canada.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </footer>
+
+        </main>
+        <script>
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    menuIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+  });
+</script>
+    </body>
+</html>

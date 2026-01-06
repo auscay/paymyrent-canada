@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federal Staff Quick Loan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <div class="min-h-screen grid grid-cols-12 gap-0">
+    
+    <!-- LEFT SIDE -->
+    <div class="col-span-5 flex flex-col items-center justify-center bg-sky-400 p-2">
+      <img src="/images/1a.png" alt="Lady" class="object-contain h-[70%] w-auto mx-auto" />
+      <h2 class="mt-6 text-white font-bold text-xl lg:text-2xl tracking-wide text-center">
+        FEDERAL STAFF QUICK LOAN
+      </h2>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-span-7 flex items-center justify-center p-6">
+      <div class="bg-white rounded-2xl shadow-lg w-[90%] h-[90%] p-8 flex flex-col justify-between">
+        
+        <!-- Top content -->
+        <div>
+          <!-- Step icons -->
+          <div class="flex justify-between mb-6">
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-sky-500 text-sky-500">
+                <span class="material-icons">account_balance_wallet</span>
+              </div>
+              <p class="mt-1 text-xs font-medium">Amount</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-sky-500 text-sky-500">
+                <span class="material-icons">insights</span>
+              </div>
+              <p class="mt-1 text-xs font-medium">Loan Breakdown</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-sky-500 text-sky-500">
+                <span class="material-icons">person</span>
+              </div>
+              <p class="mt-1 text-xs font-medium">Personal Information</p>
+            </div>
+          </div>
+
+          <!-- Loan details -->
+          <div class="grid grid-cols-2 gap-y-3 text-sm mb-5">
+            <p><span class="font-semibold text-gray-700">Amount</span><br><span class="font-bold text-black">₦30,000</span></p>
+            <p><span class="font-semibold text-gray-700">Duration</span><br><span class="font-bold text-black">1 Month</span></p>
+            <p><span class="font-semibold text-gray-700">Repayment</span><br><span class="font-bold text-black">₦37,500.00</span></p>
+            <p><span class="font-semibold text-gray-700">Loan Start Date</span><br><span class="font-bold text-black">Aug 26, 2025</span></p>
+            <p><span class="font-semibold text-gray-700">Loan End Date</span><br><span class="font-bold text-black">Sep 26, 2025</span></p>
+            <p><span class="font-semibold text-gray-700">Interest Per Month</span><br><span class="font-bold text-black">25%</span></p>
+          </div>
+
+          <!-- Paragraph 1 -->
+          <p class="text-xs text-gray-700 mb-3 leading-relaxed">
+            By submitting your loan application, you acknowledge and agree to the following terms: 
+            Confidence bank may verify information about your employment, salary, loans, and other relevant data 
+            from third-party sources to assess your loan eligibility. If your application is approved, loan 
+            installments will be automatically deducted from your salary source before being credited to your 
+            account. In case of default, any outstanding balance may be recovered from other linked accounts you own.
+          </p>
+
+          <!-- Paragraph 2 -->
+          <p class="text-xs text-gray-800 mb-4 leading-relaxed">
+            Your consent is required for the Confidence bank Loan Application process, information verification methods, 
+            and automatic deductions. You can check the box below. Additionally, you confirm your acknowledgment and 
+            acceptance of our <a href="#" class="text-sky-500 underline">Privacy Policy</a> and 
+            <a href="#" class="text-sky-500 underline">Loan Terms and Conditions</a>.
+          </p>
+
+          <!-- Checkbox -->
+          <div class="flex items-start mb-5">
+            <input id="consent" type="checkbox" class="mt-1 w-4 h-4 text-sky-500 border-gray-300 rounded">
+            <label for="con sent" class="ml-2 text-xs text-black leading-relaxed">
+              I consent to the Confidence bank Application process and terms outlined above.
+            </label>
+          </div>
+        </div>
+
+        <!-- Bottom buttons -->
+        <div class="flex justify-between">
+          <button class="px-5 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 text-sm">Previous</button>
+          <button class="px-5 py-2 bg-sky-500 text-white rounded-lg hover:bg-red-900 text-sm">Next</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
